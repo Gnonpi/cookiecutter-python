@@ -22,10 +22,6 @@ poetry install
 echo ">> Running tests"
 poetry run pytest
 
-echo ">>> Setting git"
-git init
-git add .
-
 echo ">> Running precommit"
 poetry run pre-commit run --all-files
 

@@ -15,12 +15,19 @@ click = "^8.1.3"
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.18.1"
 pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
 mypy = "^0.950"
 
 {%- if cookiecutter.use_cli == "yes" -%}
 [tool.poetry.scripts]
 {{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}.cli:cli"
 {% endif %}
+
+[tool.pytest.ini_options]
+addopts = "-ra --cov={{ cookiecutter.project_slug }}"
+testpaths = [
+    "tests"
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
