@@ -2,7 +2,7 @@
 name = "cookiecutter-project"
 version = "0.1.0"
 description = ""
-authors = ["Denis Viviès <dvivies@bmat.com>"]
+authors = ["Gnonpi <legnonpi@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
