@@ -16,6 +16,9 @@ poetry run cookiecutter ${SCRIPT_DIR}/template -o ${TMP_DIR}
 echo "> Moving to output"
 cd ${TMP_OUTPUT}
 
+echo "> Poetry use 3.10"
+poetry env use 3.10.6
+
 echo ">> Running install"
 poetry install
 
